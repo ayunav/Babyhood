@@ -25,12 +25,21 @@
     [super viewDidLoad];
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     self.loginButton.delegate = self;
-    [self.view addSubview:loginButton];
+//    [self.view addSubview:loginButton];
     
     loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
 
 }
+
+- (void)loginButtonDidLogOut:(UIButton *)sender {
+    NSLog(@"logged out");
+}
+
+- (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error {
+    NSLog(@"implemented method");
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
