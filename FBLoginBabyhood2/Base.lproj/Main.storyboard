@@ -49,6 +49,11 @@
                                     <constraint firstAttribute="height" constant="150" id="387-uq-95l"/>
                                     <constraint firstAttribute="width" constant="150" id="ovm-hr-VZz"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAr-af-2um" userLabel="UserBioLabel">
                                 <rect key="frame" x="217" y="73" width="363" height="109"/>

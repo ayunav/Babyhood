@@ -30,6 +30,7 @@
     self.loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
 
+
 }
 
 -(void)toggleHiddenState:(BOOL)shouldHide {
@@ -50,7 +51,7 @@
                  self.usernameLabel.text = [result objectForKey:@"name"];
                  self.userBioLabel.text = [result objectForKey:@"bio"];
                  self.fbLinkLabel.text = [result objectForKey:@"link"];
-             }
+                              }
          }];
     }
     
