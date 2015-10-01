@@ -15,6 +15,8 @@
 
 
 
+-(void)toggleHiddenState:(BOOL)shouldHide;
+
 @end
 
 @implementation ViewController
@@ -22,24 +24,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [super viewDidLoad];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    self.loginButton.delegate = self;
-//    [self.view addSubview:loginButton];
+    [self toggleHiddenState:YES];
     
-    loginButton.readPermissions =
+    self.loginButton.delegate = self;
+    self.loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
 
 }
 
-- (void)loginButtonDidLogOut:(UIButton *)sender {
-    NSLog(@"logged out");
+-(void)toggleHiddenState:(BOOL)shouldHide {
+    self.usernameLabel.hidden = shouldHide;
+    self.userBioLabel.hidden = shouldHide;
+    self.profilePicture.hidden = shouldHide;
+    self.fbLinkLabel.hidden = shouldHide;
 }
+
 
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error {
-    NSLog(@"implemented method");
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"picture, email, name, gender, link, bio"}]
+         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+             if (!error) {
+                 NSLog(@"fetched user:%@", result);
+                 self.usernameLabel.text = [result objectForKey:@"name"];
+                 self.userBioLabel.text = [result objectForKey:@"bio"];
+                 self.fbLinkLabel.text = [result objectForKey:@"link"];
+             }
+         }];
+    }
+    
+    [self toggleHiddenState:NO];
 }
 
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    [self toggleHiddenState:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

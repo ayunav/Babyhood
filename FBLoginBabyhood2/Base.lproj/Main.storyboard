@@ -64,8 +64,8 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FB Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-wL-HxV" userLabel="FBLinkLabel">
-                                <rect key="frame" x="217" y="202" width="363" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FB Link" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-wL-HxV" userLabel="FBLinkLabel">
+                                <rect key="frame" x="20" y="202" width="560" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,7 +81,7 @@
                             <constraint firstItem="Lbz-wL-HxV" firstAttribute="top" secondItem="kAr-af-2um" secondAttribute="bottom" constant="20" id="aj9-tr-zpP"/>
                             <constraint firstItem="kAr-af-2um" firstAttribute="leading" secondItem="x6N-Rm-enk" secondAttribute="trailing" constant="47" id="cJu-yq-LGd"/>
                             <constraint firstItem="x6N-Rm-enk" firstAttribute="top" secondItem="83M-dd-0vY" secondAttribute="bottom" constant="12" id="jzJ-SN-itI"/>
-                            <constraint firstItem="Lbz-wL-HxV" firstAttribute="leading" secondItem="VTw-r7-dfZ" secondAttribute="leadingMargin" constant="197" id="lBV-gQ-D9z"/>
+                            <constraint firstItem="Lbz-wL-HxV" firstAttribute="leading" secondItem="VTw-r7-dfZ" secondAttribute="leadingMargin" id="lBV-gQ-D9z"/>
                             <constraint firstItem="LYI-AD-trL" firstAttribute="top" secondItem="wPN-QQ-9bp" secondAttribute="bottom" constant="20" id="nKy-ob-mN6"/>
                             <constraint firstItem="wPN-QQ-9bp" firstAttribute="centerX" secondItem="VTw-r7-dfZ" secondAttribute="centerX" id="rp7-LK-fwk"/>
                             <constraint firstItem="kAr-af-2um" firstAttribute="trailing" secondItem="VTw-r7-dfZ" secondAttribute="trailingMargin" id="uRP-yk-S71"/>
