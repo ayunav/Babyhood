@@ -77,7 +77,7 @@
                         <outlet property="loginButton" destination="wPN-QQ-9bp" id="trn-mD-PWd"/>
                         <outlet property="logoImage" destination="MqZ-TA-ENm" id="V5Y-Vo-s49"/>
                         <outlet property="termsOfServiceLabel" destination="ess-Qv-vGu" id="AfO-pl-4mD"/>
-                        <segue destination="7vT-Yg-jOc" kind="show" identifier="TabBarSegue" id="KqS-6c-Kb2"/>
+                        <segue destination="38B-F1-ovm" kind="show" identifier="TabBarSegue" id="oXJ-gZ-fUC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XaI-H4-XxI" sceneMemberID="firstResponder"/>
@@ -197,4 +197,7 @@
     <resources>
         <image name="Landing-no_CTA.png" width="750" height="1334"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oXJ-gZ-fUC"/>
+    </inferredMetricsTieBreakers>
 </document>
