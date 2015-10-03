@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 
 #import "ViewController.h"
+#import "ViewController.h"
 
 @interface UserProfileViewController : ViewController
 

@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *termsOfServiceLabel;
 
+@property (nonatomic) NSString *fbUserID;
 
 @end
 

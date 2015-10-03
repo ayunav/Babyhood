@@ -81,10 +81,12 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     UserProfileViewController *userVC = segue.destinationViewController;
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    userVC.fbUserID = @"me";
 }
 
 @end

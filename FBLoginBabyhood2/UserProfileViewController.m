@@ -7,6 +7,7 @@
 //
 
 #import "UserProfileViewController.h"
+#import "NSFacebookClient.h"
 
 @interface UserProfileViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    NSDictionary *userInfo = [NSFacebookClient getProfileInfo:self.fbUserID];
+    
+    self.fbLinkLabel.text = [userInfo objectForKey:@"link"];
+    self.usernameLabel.text = [userInfo objectForKey:@"name"]; 
+
+
+
 }
 
 - (void)didReceiveMemoryWarning {
