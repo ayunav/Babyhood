@@ -10,6 +10,8 @@
 
 @interface NSFirebaseClient : NSObject
 
+//+ Firebase *myRootRef [[Firebase alloc]initwithUrl:@""];
+
 + (NSDictionary *)getProfileInfo:(NSString *)fbUserID;
 
 + (NSDictionary *)getNearbyUsers:(NSString *)fbUserID;
