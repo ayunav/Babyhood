@@ -10,12 +10,14 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #import "ViewController.h"
+#import "UserProfileViewController.h"
+#import "NSFacebookClient.h"
 
 @interface ViewController ()
 
 
 
--(void)toggleHiddenState:(BOOL)shouldHide;
+//-(void)toggleHiddenState:(BOOL)shouldHide;
 
 @end
 
@@ -24,9 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self toggleHiddenState:YES];
-    
-    //self.lo.backgroundColor=[UIColor darkGrayColor];
+    //[self toggleHiddenState:YES];
     
     self.loginButton.delegate = self;
     self.loginButton.readPermissions =
@@ -35,38 +35,56 @@
 
 }
 
--(void)toggleHiddenState:(BOOL)shouldHide {
-    self.usernameLabel.hidden = shouldHide;
-    self.userBioLabel.hidden = shouldHide;
-    self.profilePicture.hidden = shouldHide;
-    self.fbLinkLabel.hidden = shouldHide;
-}
+
+//-(void)toggleHiddenState:(BOOL)shouldHide {
+//    self.usernameLabel.hidden = shouldHide;
+//    self.userBioLabel.hidden = shouldHide;
+//    self.profilePicture.hidden = shouldHide;
+//    self.fbLinkLabel.hidden = shouldHide;
+//    self.termsOfServiceLabel.hidden = !shouldHide;
+//    self.logoImage.hidden = !shouldHide;
+//    //self.loginButton.hidden = !shouldHide;
+//}
+
+
 
 
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error {
     
     if ([FBSDKAccessToken currentAccessToken]) {
+
+        [NSFacebookClient setFBAccessToken:[FBSDKAccessToken currentAccessToken]]; 
+        
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"picture, email, name, gender, link, bio"}]
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
-                 NSLog(@"fetched user:%@", result);
-                 self.usernameLabel.text = [result objectForKey:@"name"];
-                 self.userBioLabel.text = [result objectForKey:@"bio"];
-                 self.fbLinkLabel.text = [result objectForKey:@"link"];
+                 //NSLog(@"fetched user:%@", result);
+//                 self.usernameLabel.text = [result objectForKey:@"name"];
+//                 self.userBioLabel.text = [result objectForKey:@"bio"];
+//                 self.fbLinkLabel.text = [result objectForKey:@"link"];
                               }
          }];
     }
     
-    [self toggleHiddenState:NO];
+    //[self toggleHiddenState:NO];
+    
+    [self performSegueWithIdentifier:@"TabBarSegue" sender:self];
 }
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
-    [self toggleHiddenState:YES];
+    //[self toggleHiddenState:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UserProfileViewController *userVC = segue.destinationViewController;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end

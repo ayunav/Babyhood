@@ -14,14 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
 
-@property (weak, nonatomic) IBOutlet FBSDKProfilePictureView *profilePicture;
-
-@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *userBioLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *fbLinkLabel;
-
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
 @property (weak, nonatomic) IBOutlet UILabel *termsOfServiceLabel;
