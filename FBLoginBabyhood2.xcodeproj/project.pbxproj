@@ -18,6 +18,7 @@
 		2993124D1BC0278300E4BACE /* Landing-no_CTA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2993124C1BC0278300E4BACE /* Landing-no_CTA.png */; settings = {ASSET_TAGS = (); }; };
 		299312501BC049A800E4BACE /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2993124F1BC049A800E4BACE /* UserProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 		299312561BC060C300E4BACE /* NSFacebookClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 299312551BC060C300E4BACE /* NSFacebookClient.m */; settings = {ASSET_TAGS = (); }; };
+		299312591BC07A0500E4BACE /* NSFirebaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 299312581BC07A0500E4BACE /* NSFirebaseClient.m */; settings = {ASSET_TAGS = (); }; };
 		67AD31C1B1E79E5CF23226EA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F281CC7A35B9781CC1BCE9F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		2993124F1BC049A800E4BACE /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		299312541BC060C300E4BACE /* NSFacebookClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFacebookClient.h; sourceTree = "<group>"; };
 		299312551BC060C300E4BACE /* NSFacebookClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFacebookClient.m; sourceTree = "<group>"; };
+		299312571BC07A0500E4BACE /* NSFirebaseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFirebaseClient.h; sourceTree = "<group>"; };
+		299312581BC07A0500E4BACE /* NSFirebaseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFirebaseClient.m; sourceTree = "<group>"; };
 		403715D3624F7D52AE4DCEAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7F281CC7A35B9781CC1BCE9F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7A3AF643E86E143F8C7E34 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				292501E81BBA15040046AD96 /* AppDelegate.m */,
 				299312541BC060C300E4BACE /* NSFacebookClient.h */,
 				299312551BC060C300E4BACE /* NSFacebookClient.m */,
+				299312571BC07A0500E4BACE /* NSFirebaseClient.h */,
+				299312581BC07A0500E4BACE /* NSFirebaseClient.m */,
 				292501EA1BBA15040046AD96 /* ViewController.h */,
 				292501EB1BBA15040046AD96 /* ViewController.m */,
 				2993124E1BC049A800E4BACE /* UserProfileViewController.h */,
@@ -358,6 +363,7 @@
 				292501EC1BBA15040046AD96 /* ViewController.m in Sources */,
 				299312501BC049A800E4BACE /* UserProfileViewController.m in Sources */,
 				292501E91BBA15040046AD96 /* AppDelegate.m in Sources */,
+				299312591BC07A0500E4BACE /* NSFirebaseClient.m in Sources */,
 				292501E61BBA15040046AD96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
