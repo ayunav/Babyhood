@@ -34,6 +34,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing-no_CTA.png" translatesAutoresizingMaskIntoConstraints="NO" id="MqZ-TA-ENm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-QQ-9bp" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="200" y="530" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -74,33 +77,56 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing, you agree to our Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ess-Qv-vGu">
+                                <rect key="frame" x="193" y="476" width="215" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ANJ-30-1a3"/>
+                                    <constraint firstAttribute="width" constant="215" id="xVb-JT-FKR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.8901960784313725" green="0.99215686274509807" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L1O-4H-N3I" firstAttribute="trailing" secondItem="VTw-r7-dfZ" secondAttribute="trailingMargin" id="0Xo-as-vWK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MqZ-TA-ENm" secondAttribute="trailing" constant="-20" id="4Xm-Bd-SqX"/>
+                            <constraint firstItem="ess-Qv-vGu" firstAttribute="centerX" secondItem="wPN-QQ-9bp" secondAttribute="centerX" id="5mt-iM-2Ww"/>
                             <constraint firstItem="L1O-4H-N3I" firstAttribute="top" secondItem="83M-dd-0vY" secondAttribute="bottom" constant="12" id="9HW-U2-RCo"/>
+                            <constraint firstItem="MqZ-TA-ENm" firstAttribute="leading" secondItem="VTw-r7-dfZ" secondAttribute="leadingMargin" id="Hux-0g-SWD"/>
                             <constraint firstItem="kAr-af-2um" firstAttribute="top" secondItem="L1O-4H-N3I" secondAttribute="bottom" constant="20" id="MdM-5b-fK9"/>
                             <constraint firstItem="kAr-af-2um" firstAttribute="top" secondItem="L1O-4H-N3I" secondAttribute="bottom" constant="20" id="Nxh-Rf-sjq"/>
                             <constraint firstItem="x6N-Rm-enk" firstAttribute="leading" secondItem="VTw-r7-dfZ" secondAttribute="leadingMargin" id="OZL-PT-5yE"/>
+                            <constraint firstItem="wPN-QQ-9bp" firstAttribute="top" secondItem="ess-Qv-vGu" secondAttribute="bottom" constant="8" id="OiY-sA-lnS"/>
+                            <constraint firstItem="MqZ-TA-ENm" firstAttribute="leading" secondItem="VTw-r7-dfZ" secondAttribute="leadingMargin" constant="-20" id="USp-RI-tHb"/>
                             <constraint firstItem="Lbz-wL-HxV" firstAttribute="trailing" secondItem="VTw-r7-dfZ" secondAttribute="trailingMargin" id="Xa9-A5-L3l"/>
                             <constraint firstItem="Lbz-wL-HxV" firstAttribute="top" secondItem="kAr-af-2um" secondAttribute="bottom" constant="20" id="aj9-tr-zpP"/>
+                            <constraint firstItem="MqZ-TA-ENm" firstAttribute="top" secondItem="VTw-r7-dfZ" secondAttribute="topMargin" id="bHY-oc-e3k"/>
                             <constraint firstItem="kAr-af-2um" firstAttribute="leading" secondItem="x6N-Rm-enk" secondAttribute="trailing" constant="47" id="cJu-yq-LGd"/>
                             <constraint firstItem="x6N-Rm-enk" firstAttribute="top" secondItem="83M-dd-0vY" secondAttribute="bottom" constant="12" id="jzJ-SN-itI"/>
                             <constraint firstItem="Lbz-wL-HxV" firstAttribute="leading" secondItem="VTw-r7-dfZ" secondAttribute="leadingMargin" id="lBV-gQ-D9z"/>
                             <constraint firstItem="LYI-AD-trL" firstAttribute="top" secondItem="wPN-QQ-9bp" secondAttribute="bottom" constant="20" id="nKy-ob-mN6"/>
+                            <constraint firstItem="LYI-AD-trL" firstAttribute="top" secondItem="MqZ-TA-ENm" secondAttribute="bottom" id="nTd-WK-jg1"/>
+                            <constraint firstItem="wPN-QQ-9bp" firstAttribute="top" secondItem="MqZ-TA-ENm" secondAttribute="bottom" id="qyN-uh-0Em"/>
                             <constraint firstItem="wPN-QQ-9bp" firstAttribute="centerX" secondItem="VTw-r7-dfZ" secondAttribute="centerX" id="rp7-LK-fwk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MqZ-TA-ENm" secondAttribute="trailing" id="tNA-SJ-6HM"/>
                             <constraint firstItem="kAr-af-2um" firstAttribute="trailing" secondItem="VTw-r7-dfZ" secondAttribute="trailingMargin" id="uRP-yk-S71"/>
                             <constraint firstItem="L1O-4H-N3I" firstAttribute="leading" secondItem="x6N-Rm-enk" secondAttribute="trailing" constant="47" id="z7L-qq-52W"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Hux-0g-SWD"/>
+                                <exclude reference="tNA-SJ-6HM"/>
                                 <exclude reference="Nxh-Rf-sjq"/>
+                                <exclude reference="qyN-uh-0Em"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="fbLinkLabel" destination="Lbz-wL-HxV" id="RuD-hZ-bfb"/>
                         <outlet property="loginButton" destination="wPN-QQ-9bp" id="trn-mD-PWd"/>
+                        <outlet property="logoImage" destination="MqZ-TA-ENm" id="V5Y-Vo-s49"/>
                         <outlet property="profilePicture" destination="x6N-Rm-enk" id="vxi-xJ-hgR"/>
                         <outlet property="userBioLabel" destination="kAr-af-2um" id="avy-9A-1bk"/>
                         <outlet property="usernameLabel" destination="L1O-4H-N3I" id="KqY-1m-6dS"/>
@@ -111,4 +137,7 @@
             <point key="canvasLocation" x="859" y="305"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Landing-no_CTA.png" width="750" height="1334"/>
+    </resources>
 </document>

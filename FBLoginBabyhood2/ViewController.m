@@ -26,6 +26,8 @@
 
     [self toggleHiddenState:YES];
     
+    //self.lo.backgroundColor=[UIColor darkGrayColor];
+    
     self.loginButton.delegate = self;
     self.loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];

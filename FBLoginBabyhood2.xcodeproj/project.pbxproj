@@ -15,6 +15,7 @@
 		292501F41BBA15040046AD96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292501F21BBA15040046AD96 /* LaunchScreen.storyboard */; };
 		292501FF1BBA15050046AD96 /* FBLoginBabyhood2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 292501FE1BBA15050046AD96 /* FBLoginBabyhood2Tests.m */; };
 		2925020A1BBA15050046AD96 /* FBLoginBabyhood2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 292502091BBA15050046AD96 /* FBLoginBabyhood2UITests.m */; };
+		2993124D1BC0278300E4BACE /* Landing-no_CTA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2993124C1BC0278300E4BACE /* Landing-no_CTA.png */; settings = {ASSET_TAGS = (); }; };
 		67AD31C1B1E79E5CF23226EA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F281CC7A35B9781CC1BCE9F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		292502051BBA15050046AD96 /* FBLoginBabyhood2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBLoginBabyhood2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		292502091BBA15050046AD96 /* FBLoginBabyhood2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLoginBabyhood2UITests.m; sourceTree = "<group>"; };
 		2925020B1BBA15050046AD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2993124C1BC0278300E4BACE /* Landing-no_CTA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Landing-no_CTA.png"; sourceTree = "<group>"; };
 		403715D3624F7D52AE4DCEAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7F281CC7A35B9781CC1BCE9F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7A3AF643E86E143F8C7E34 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				292501F01BBA15040046AD96 /* Assets.xcassets */,
 				292501F21BBA15040046AD96 /* LaunchScreen.storyboard */,
 				292501F51BBA15040046AD96 /* Info.plist */,
+				2993124B1BC0276600E4BACE /* images */,
 				292501E41BBA15040046AD96 /* Supporting Files */,
 			);
 			path = FBLoginBabyhood2;
@@ -154,6 +157,14 @@
 				2925020B1BBA15050046AD96 /* Info.plist */,
 			);
 			path = FBLoginBabyhood2UITests;
+			sourceTree = "<group>";
+		};
+		2993124B1BC0276600E4BACE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2993124C1BC0278300E4BACE /* Landing-no_CTA.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		F3AD950EE6CFD7B3122D346B /* Frameworks */ = {
@@ -275,6 +286,7 @@
 				292501F41BBA15040046AD96 /* LaunchScreen.storyboard in Resources */,
 				292501F11BBA15040046AD96 /* Assets.xcassets in Resources */,
 				292501EF1BBA15040046AD96 /* Main.storyboard in Resources */,
+				2993124D1BC0278300E4BACE /* Landing-no_CTA.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,5 +22,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *fbLinkLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *termsOfServiceLabel;
+
+
 @end
 
