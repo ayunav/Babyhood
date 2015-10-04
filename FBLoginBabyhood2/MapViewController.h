@@ -14,5 +14,7 @@
 #import "NSFirebaseClient.h"
 
 @interface MapViewController : ViewController
-    @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 @end

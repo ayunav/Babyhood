@@ -23,9 +23,7 @@
 + (NSDictionary *)getProfileInfo:(NSString *)fbUserID {
     
     Firebase *myRootRef = [[Firebase alloc] initWithUrl:kFirebaseBabyhoodNS];
-//
-//    [myRootRef setValue:@"Do you have data? You'll love Firebase."];
-    
+
     NSDictionary *fakeResult = @{
                                  @"bio" : @"sheHacker, mother of two",
                                  @"kidsInfo" : @"boy, 4, girl, 2",

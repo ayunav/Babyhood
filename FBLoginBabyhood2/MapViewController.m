@@ -12,11 +12,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
-    
+
+    [self showMap]; 
 }
 
 - (void)showMap {

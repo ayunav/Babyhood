@@ -40,8 +40,6 @@
     self.profilePicture.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.profilePicture.layer.borderWidth = 1.0;
     
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

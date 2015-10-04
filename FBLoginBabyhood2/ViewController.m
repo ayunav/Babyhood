@@ -24,8 +24,6 @@
     self.loginButton.delegate = self;
     self.loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
-
-
 }
 
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error {
@@ -37,7 +35,7 @@
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"picture, email, name, gender, link, bio"}]
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
-                 NSLog(@"fetched user:%@", result);
+                 //NSLog(@"fetched user:%@", result);
                  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
                  appDelegate.userInfo = result;
 
@@ -54,7 +52,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -63,8 +60,6 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    //userVC.fbUserID = @"me";
-    //userVC.userInfo = self.userInfo;
 }
 
 @end

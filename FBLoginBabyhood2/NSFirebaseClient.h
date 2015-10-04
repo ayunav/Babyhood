@@ -19,6 +19,4 @@
 
 + (NSDictionary *)getNearbyUsers:(NSString *)fbUserID;
 
-
-
 @end

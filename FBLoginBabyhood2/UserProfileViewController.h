@@ -19,8 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *userBioLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *fbLinkLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *bioTextFieldInput;
