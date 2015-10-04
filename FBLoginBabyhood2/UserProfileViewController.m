@@ -27,8 +27,9 @@
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
-    self.fbLinkLabel.text = [appDelegate.userInfo objectForKey:@"link"];
     self.usernameLabel.text = [appDelegate.userInfo objectForKey:@"name"];
+    self.fbLinkLabel.text = @"https://www.facebook.com/ayuna.moscow";
+    //self.fbLinkLabel.text = [appDelegate.userInfo objectForKey:@"link"];
     
 
     NSDictionary *databaseUserInfo = [NSFirebaseClient getProfileInfo:self.fbUserID];
