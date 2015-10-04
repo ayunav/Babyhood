@@ -58,7 +58,7 @@
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"picture, email, name, gender, link, bio"}]
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
-                 //NSLog(@"fetched user:%@", result);
+                 NSLog(@"fetched user:%@", result);
 //                 self.usernameLabel.text = [result objectForKey:@"name"];
 //                 self.userBioLabel.text = [result objectForKey:@"bio"];
 //                 self.fbLinkLabel.text = [result objectForKey:@"link"];
@@ -72,6 +72,7 @@
 }
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    NSLog(@"logged out");
     //[self toggleHiddenState:YES];
 }
 

@@ -25,7 +25,8 @@
     NSDictionary *userInfo = [NSFacebookClient getProfileInfo:self.fbUserID];
     
     self.fbLinkLabel.text = [userInfo objectForKey:@"link"];
-    self.usernameLabel.text = [userInfo objectForKey:@"name"]; 
+    self.usernameLabel.text = [userInfo objectForKey:@"name"];
+    
 
     NSDictionary *databaseUserInfo = [NSFirebaseClient getProfileInfo:self.fbUserID];
     
