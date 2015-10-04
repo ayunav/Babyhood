@@ -8,9 +8,23 @@
 
 #import "NSFirebaseClient.h"
 
+#define kFirebaseBabyhoodNS @"https://glaring-inferno-5259.firebaseio.com"
+
 @implementation NSFirebaseClient
 
+//- (id)init {
+//    self = [super init];
+//    if (self) {
+//        self.firebase = [[Firebase alloc] initWithUrl:kFirebaseBabyhoodNS];
+//    }
+//    return self;
+//}
+
 + (NSDictionary *)getProfileInfo:(NSString *)fbUserID {
+    
+    Firebase *myRootRef = [[Firebase alloc] initWithUrl:kFirebaseBabyhoodNS];
+//
+//    [myRootRef setValue:@"Do you have data? You'll love Firebase."];
     
     NSDictionary *fakeResult = @{
                                  @"bio" : @"sheHacker, mother of two",
@@ -31,6 +45,7 @@
                                        };
     return testUsersIDs;
 }
+
 
 
 @end

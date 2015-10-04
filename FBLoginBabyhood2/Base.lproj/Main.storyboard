@@ -129,6 +129,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wyt-oZ-JXV">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kids age/Stage" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WQs-kw-Ujj">
+                                <rect key="frame" x="20" y="360" width="561" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvd-p3-P9L">
+                                <rect key="frame" x="277" y="536" width="46" height="30"/>
+                                <state key="normal" title="Save "/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="38B-F1-ovm" eventType="touchUpInside" id="5nu-Dl-ZS9"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oft-Uh-wxD">
                                 <rect key="frame" x="413" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -138,17 +155,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wyt-oZ-JXV" firstAttribute="centerX" secondItem="ywG-Ai-7cj" secondAttribute="centerX" id="4cB-AT-cl5"/>
+                            <constraint firstItem="wyt-oZ-JXV" firstAttribute="leading" secondItem="ywG-Ai-7cj" secondAttribute="leadingMargin" id="7c3-BW-mzN"/>
                             <constraint firstItem="1Qk-P5-OZZ" firstAttribute="leading" secondItem="ywG-Ai-7cj" secondAttribute="leadingMargin" id="9A0-1r-XmV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WQs-kw-Ujj" secondAttribute="trailing" id="BXc-m0-sKW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JdE-B5-Vh7" secondAttribute="trailing" constant="125" id="JOA-4u-JWO"/>
+                            <constraint firstItem="wyt-oZ-JXV" firstAttribute="centerY" secondItem="ywG-Ai-7cj" secondAttribute="centerY" id="Lku-cu-o9W"/>
                             <constraint firstItem="JdE-B5-Vh7" firstAttribute="top" secondItem="Oft-Uh-wxD" secondAttribute="bottom" constant="43" id="Mzz-Ur-x6R"/>
                             <constraint firstItem="Oft-Uh-wxD" firstAttribute="top" secondItem="7RH-yo-kWp" secondAttribute="bottom" constant="8" id="Vd1-fB-DJ2"/>
+                            <constraint firstItem="Tvd-p3-P9L" firstAttribute="centerX" secondItem="ywG-Ai-7cj" secondAttribute="centerX" id="Vo3-WM-inp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wyt-oZ-JXV" secondAttribute="trailing" id="dwX-Ej-4Dq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oft-Uh-wxD" secondAttribute="trailing" constant="125" id="eev-PJ-PJf"/>
+                            <constraint firstItem="Ubh-kR-RjV" firstAttribute="top" secondItem="Tvd-p3-P9L" secondAttribute="bottom" constant="34" id="jzi-zC-aIO"/>
+                            <constraint firstItem="WQs-kw-Ujj" firstAttribute="leading" secondItem="ywG-Ai-7cj" secondAttribute="leadingMargin" id="oe4-yk-Gfj"/>
+                            <constraint firstItem="WQs-kw-Ujj" firstAttribute="top" secondItem="wyt-oZ-JXV" secondAttribute="bottom" constant="45" id="orz-8S-emT"/>
                             <constraint firstItem="1Qk-P5-OZZ" firstAttribute="top" secondItem="7RH-yo-kWp" secondAttribute="bottom" constant="8" id="vH0-pb-rpI"/>
+                            <constraint firstItem="WQs-kw-Ujj" firstAttribute="centerX" secondItem="wyt-oZ-JXV" secondAttribute="centerX" id="w9J-U0-TQN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile " id="rIu-uP-sXd"/>
                     <connections>
+                        <outlet property="bioTextFieldInput" destination="wyt-oZ-JXV" id="YYh-lt-FGD"/>
                         <outlet property="fbLinkLabel" destination="JdE-B5-Vh7" id="WVM-dM-QBD"/>
+                        <outlet property="kidsInfoTextFieldInput" destination="WQs-kw-Ujj" id="BSN-2E-hzo"/>
                         <outlet property="profilePicture" destination="1Qk-P5-OZZ" id="Qdu-GZ-O5a"/>
                         <outlet property="usernameLabel" destination="Oft-Uh-wxD" id="z6B-h4-so5"/>
                     </connections>

@@ -23,4 +23,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *fbLinkLabel;
 
+@property (weak, nonatomic) IBOutlet UITextField *bioTextFieldInput;
+
+@property (weak, nonatomic) IBOutlet UITextField *kidsInfoTextFieldInput;
+
 @end

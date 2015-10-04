@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Firebase/Firebase.h>
+
+
 
 @interface NSFirebaseClient : NSObject
 
-//+ Firebase *myRootRef [[Firebase alloc]initwithUrl:@""];
+@property (nonatomic, strong) Firebase* firebase;
 
 + (NSDictionary *)getProfileInfo:(NSString *)fbUserID;
 
 + (NSDictionary *)getNearbyUsers:(NSString *)fbUserID;
+
+
 
 @end
