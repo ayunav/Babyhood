@@ -20,5 +20,7 @@
 
 @property (nonatomic) NSString *fbUserID;
 
+@property (nonatomic) id userInfo;
+
 @end
 

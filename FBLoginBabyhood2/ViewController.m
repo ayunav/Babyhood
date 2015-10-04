@@ -9,24 +9,17 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
+#import "AppDelegate.h"
 #import "ViewController.h"
 #import "UserProfileViewController.h"
 #import "NSFacebookClient.h"
+#import "User.h"
 
-@interface ViewController ()
-
-
-
-//-(void)toggleHiddenState:(BOOL)shouldHide;
-
-@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    //[self toggleHiddenState:YES];
     
     self.loginButton.delegate = self;
     self.loginButton.readPermissions =
@@ -34,20 +27,6 @@
 
 
 }
-
-
-//-(void)toggleHiddenState:(BOOL)shouldHide {
-//    self.usernameLabel.hidden = shouldHide;
-//    self.userBioLabel.hidden = shouldHide;
-//    self.profilePicture.hidden = shouldHide;
-//    self.fbLinkLabel.hidden = shouldHide;
-//    self.termsOfServiceLabel.hidden = !shouldHide;
-//    self.logoImage.hidden = !shouldHide;
-//    //self.loginButton.hidden = !shouldHide;
-//}
-
-
-
 
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error {
     
@@ -59,21 +38,18 @@
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
                  NSLog(@"fetched user:%@", result);
-//                 self.usernameLabel.text = [result objectForKey:@"name"];
-//                 self.userBioLabel.text = [result objectForKey:@"bio"];
-//                 self.fbLinkLabel.text = [result objectForKey:@"link"];
-                              }
+                 AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                 appDelegate.userInfo = result;
+
+             }
          }];
     }
-    
-    //[self toggleHiddenState:NO];
     
     [self performSegueWithIdentifier:@"TabBarSegue" sender:self];
 }
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
     NSLog(@"logged out");
-    //[self toggleHiddenState:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +63,8 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    userVC.fbUserID = @"me";
+    //userVC.fbUserID = @"me";
+    //userVC.userInfo = self.userInfo;
 }
 
 @end

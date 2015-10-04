@@ -10,6 +10,7 @@
 #import "UserProfileViewController.h"
 #import "NSFacebookClient.h"
 #import "NSFirebaseClient.h"
+#import "AppDelegate.h"
 
 #define kFirebaseBabyhoodNS @"https://glaring-inferno-5259.firebaseio.com"
 
@@ -22,13 +23,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSDictionary *userInfo = [NSFacebookClient getProfileInfo:self.fbUserID];
+    //NSDictionary *userInfo = [NSFacebookClient getProfileInfo:self.fbUserID];
     
-    self.fbLinkLabel.text = [userInfo objectForKey:@"link"];
-    self.usernameLabel.text = [userInfo objectForKey:@"name"];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    self.fbLinkLabel.text = [appDelegate.userInfo objectForKey:@"link"];
+    self.usernameLabel.text = [appDelegate.userInfo objectForKey:@"name"];
     
 
     NSDictionary *databaseUserInfo = [NSFirebaseClient getProfileInfo:self.fbUserID];
+    
+    
+    self.profilePicture.layer.cornerRadius = 60.0;
+    self.profilePicture.clipsToBounds = YES;
+    self.profilePicture.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.profilePicture.layer.borderWidth = 1.0;
     
     
     
@@ -36,7 +45,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
