@@ -15,15 +15,15 @@
 		292501F41BBA15040046AD96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292501F21BBA15040046AD96 /* LaunchScreen.storyboard */; };
 		292501FF1BBA15050046AD96 /* FBLoginBabyhood2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 292501FE1BBA15050046AD96 /* FBLoginBabyhood2Tests.m */; };
 		2925020A1BBA15050046AD96 /* FBLoginBabyhood2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 292502091BBA15050046AD96 /* FBLoginBabyhood2UITests.m */; };
-		2957124E1BC17A160090AEA6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957124D1BC17A160090AEA6 /* MapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2957124E1BC17A160090AEA6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957124D1BC17A160090AEA6 /* MapViewController.m */; };
 		295712501BC17BB10090AEA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2957124F1BC17BB10090AEA6 /* CoreLocation.framework */; };
 		295712521BC17BBB0090AEA6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295712511BC17BBB0090AEA6 /* MapKit.framework */; };
-		295712551BC181AB0090AEA6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 295712541BC181AB0090AEA6 /* User.m */; settings = {ASSET_TAGS = (); }; };
-		295712581BC187B50090AEA6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 295712571BC187B50090AEA6 /* TabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		2993124D1BC0278300E4BACE /* Landing-no_CTA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2993124C1BC0278300E4BACE /* Landing-no_CTA.png */; settings = {ASSET_TAGS = (); }; };
-		299312501BC049A800E4BACE /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2993124F1BC049A800E4BACE /* UserProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
-		299312561BC060C300E4BACE /* NSFacebookClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 299312551BC060C300E4BACE /* NSFacebookClient.m */; settings = {ASSET_TAGS = (); }; };
-		299312591BC07A0500E4BACE /* NSFirebaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 299312581BC07A0500E4BACE /* NSFirebaseClient.m */; settings = {ASSET_TAGS = (); }; };
+		295712551BC181AB0090AEA6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 295712541BC181AB0090AEA6 /* User.m */; };
+		295712581BC187B50090AEA6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 295712571BC187B50090AEA6 /* TabBarController.m */; };
+		2993124D1BC0278300E4BACE /* Landing-no_CTA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2993124C1BC0278300E4BACE /* Landing-no_CTA.png */; };
+		299312501BC049A800E4BACE /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2993124F1BC049A800E4BACE /* UserProfileViewController.m */; };
+		299312561BC060C300E4BACE /* NSFacebookClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 299312551BC060C300E4BACE /* NSFacebookClient.m */; };
+		299312591BC07A0500E4BACE /* NSFirebaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 299312581BC07A0500E4BACE /* NSFirebaseClient.m */; };
 		67AD31C1B1E79E5CF23226EA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F281CC7A35B9781CC1BCE9F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -146,12 +146,12 @@
 				292501ED1BBA15040046AD96 /* Main.storyboard */,
 				292501E71BBA15040046AD96 /* AppDelegate.h */,
 				292501E81BBA15040046AD96 /* AppDelegate.m */,
+				295712531BC181AB0090AEA6 /* User.h */,
+				295712541BC181AB0090AEA6 /* User.m */,
 				299312541BC060C300E4BACE /* NSFacebookClient.h */,
 				299312551BC060C300E4BACE /* NSFacebookClient.m */,
 				299312571BC07A0500E4BACE /* NSFirebaseClient.h */,
 				299312581BC07A0500E4BACE /* NSFirebaseClient.m */,
-				295712531BC181AB0090AEA6 /* User.h */,
-				295712541BC181AB0090AEA6 /* User.m */,
 				292501EA1BBA15040046AD96 /* ViewController.h */,
 				292501EB1BBA15040046AD96 /* ViewController.m */,
 				295712561BC187B50090AEA6 /* TabBarController.h */,
